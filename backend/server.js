@@ -9,9 +9,12 @@ app.use(cors()); // to allow requests from frontend
 app.use(bodyParser.json()); // to parse JSON bodies
 
 mongoose.connect('mongodb+srv://drpdharshini2000:drpdharshini2000@cluster0.lqnzgra.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+.then(()=>{
+    console.log("DB is connected...!")
+})
+.catch((err)=>{
+    console.log(err)
+})
 
 const userSchema = new mongoose.Schema({
   username: String,
