@@ -14,7 +14,7 @@ mongoose.connect('mongodb+srv://drpdharshini2000:drpdharshini2000@cluster0.lqnzg
 })
 .catch((err)=>{
     console.log(err)
-})
+});
 
 const userSchema = new mongoose.Schema({
   username: String,
